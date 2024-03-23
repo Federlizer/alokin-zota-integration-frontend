@@ -1,15 +1,4 @@
 
-async function createOrder(description: string, amount: number) {
-    console.log("Making new order");
-
-    const res = await fetch("http://localhost:8080/order", {
-        method: "POST",
-    });
-
-    console.log(res.status);
-    console.log(res);
-}
-
 export default function CreateOrder() {
     return (
         <div className="flex flex-col items-center">
@@ -23,11 +12,17 @@ export default function CreateOrder() {
                     className="border rounded p-2"
                     placeholder="Description"
                     name="description"
+                    required
                 />
+
                 <input
                     className="border rounded p-2"
                     placeholder="Amount"
                     name="amount"
+                    type="number"
+                    step="0.01"
+                    min="0.01"
+                    required
                 />
 
                 <button

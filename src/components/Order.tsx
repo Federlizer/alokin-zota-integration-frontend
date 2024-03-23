@@ -4,7 +4,6 @@ interface OrderProps {
 
 export default function Order(props: OrderProps) {
     const { order } = props;
-    console.log("Going to render: ", order)
 
     return (
         <div className="flex flex-col border rounded p-4">
